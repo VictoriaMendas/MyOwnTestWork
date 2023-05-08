@@ -83,13 +83,36 @@
 // }
 // console.log(stones, 'diamond');
 
-function findMatches(arr, ...nums) {
-  const matches = [];
-  for (let num of nums) {
-    if (arr.includes(num)) {
-      matches.push(num);
-    }
-  }
+// function findMatches(arr, ...nums) {
+//   const matches = [];
+//   for (let num of nums) {
+//     if (arr.includes(num)) {
+//       matches.push(num);
+//     }
+//   }
 
-  return matches;
-}
+//   return matches;
+// }
+// function addNumbers(a, b, c) {
+//   const sum = a + b + c;
+//   console.log(sum);
+//   return sum;
+// }
+// const result = addNumbers(54, 5, 15);
+// console.log(result);
+// const array = ["Speed potion", "Dragon breath", "Stone skin"];
+// // console.log(array)
+// for (let item of array) {
+//   console.log(item);
+// }
+const obj = {
+  name: "victoria",
+  email: "victoria@gmail.com",
+  potions: [
+    { name: "Speed potion", price: 460 },
+    { name: "Dragon breath", price: 780 },
+    { name: "Stone skin", price: 520 },
+  ],
+};
+console.log(obj.potions);
+console.log({} === {});
