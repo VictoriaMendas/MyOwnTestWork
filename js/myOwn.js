@@ -105,14 +105,14 @@
 // for (let item of array) {
 //   console.log(item);
 // }
-const obj = {
-  name: "victoria",
-  email: "victoria@gmail.com",
-  potions: [
-    { name: "Speed potion", price: 460 },
-    { name: "Dragon breath", price: 780 },
-    { name: "Stone skin", price: 520 },
-  ],
-};
-console.log(obj.potions);
-console.log({} === {});
+// const obj = {
+//   name: "victoria",
+//   email: "victoria@gmail.com",
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Dragon breath", price: 780 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+// };
+// console.log(obj.potions);
+// console.log({} === {});
