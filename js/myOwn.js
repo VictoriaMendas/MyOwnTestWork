@@ -116,15 +116,62 @@
 // };
 // console.log(obj.potions);
 // console.log({} === {});
-function getCommonElements(firstArray, secondArray) {
-  const commonElements = [];
-  // Change code below this line
-  firstArray.forEach((element) => {
-    if (secondArray.includes(element)) {
-      commonElements.push(element);
-    }
-  });
+// function getCommonElements(firstArray, secondArray) {
+//   const commonElements = [];
+//   // Change code below this line
+//   firstArray.forEach((element) => {
+//     if (secondArray.includes(element)) {
+//       commonElements.push(element);
+//     }
+//   });
 
-  return commonElements;
-  // Change code above this line
+//   return commonElements;
+//   // Change code above this line
+
+// Напиши функцію findSmallerNumber(numbers)
+// яка шукає найменше число в масиві.
+// Додай перевірку що функція отримує масив
+// const numbers = [15, 5, 35, 56, 12, 24, 7, 80, 3];
+// // 1. Напиши функцію findSmallerNumber(numbers)
+// // 2. Треба перебрати масив
+
+// function findSmallerNumber(arrNumbers) {
+//   let smallestNumber = arrNumbers[0];
+
+//   for (const number of arrNumbers) {
+//     if (number < smallestNumber) {
+//       smallestNumber = number;
+//     }
+//   }
+//   return smallestNumber;
+// }
+// const result = findSmallerNumber(numbers);
+// console.log(findSmallerNumber(numbers));
+
+//  Task 945684658
+
+// Функція formatMessage(message, maxLength)
+// приймає рядок (параметр message) і форматує його,
+// якщо довжина перевищує значення в параметрі maxLength, тоді ми повертаємо  message довжиною maxLength
+//  і в кінці ставиио (...).А якщо довжина не перевищцє maxLength тоді повкртає повністю message
+// 1.Написати функцію
+// function formatMessage(message, maxLength) {
+//   if (message.length > maxLength) {
+//     return message.slice(0, maxLength) + "...";
+//   }
+//   return message;
+// }
+
+// console.log(formatMessage("People help help", 3));
+
+//Напишіть функцію caclculateAverage()
+//яка приймає довільну кількість
+//аргументів і повертає їхнє середнє значення.
+//Додати перевірку, що аргументи це числа.
+// 1. написати функцію
+// 2. додати числа поділтьт на кількість чисел
+function caclculateAverage(...args) {
+  return;
 }
+caclculateAverage(2, 56, 3, "Hello", "abg", 67);
+

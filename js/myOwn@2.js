@@ -109,5 +109,87 @@
 // const getUsersWithAge = (users, minAge, maxAge) =>
 //   users.filter((user) => user.age >= minAge && user.age <= maxAge);
 //  #5 Task
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   {
+//     title: "The Dreams in the Witch House",
+//     author: "Howard Lovecraft",
+//     rating: 8.67,
+//   },
+// ];
+// const MIN_BOOK_RATING = 8;
+// // Change code below this line
 
-const getActiveUsers = (users) => users.filter((user) => user.isActive);
+// const names = [...books]
+//   .filter((book) => book.rating > MIN_BOOK_RATING)
+//   .map((bok) => bok.author)
+//   .sort((a, b) => a.localeCompare(b));
+// console.log(names);
+//  Task # 6
+// Напишіть функцію min(a,b), яка повертає менше чисел a, b ?\
+// function min(a, b) {
+//   const minNumb = a < b ? a : b;
+//  return minNumb;
+// }
+// min(5, 10)
+
+// #7
+
+//Напишіть код, який запитуватиме
+//логін за допомогою prompt і логувати результат
+//в консоль браузера
+
+//Якщо відвідувач вводить "Адмін",
+//то prompt запитує пароль.
+//Якщо нічого не ввели або натиснута клавіша Esc
+//Вивести стороку "Скасовано"
+// Інакше вивести рядок "Я вас не знаю"
+
+//Пароль перевіряти так:
+//Якщо введено пароль "Я головний",
+//то вивести рядок "Добрий день!"
+//інакше виводити рядок "Невірний пароль!"
+// const login = prompt("Введіть логін");
+// console.log(login);
+// if (login === "Адмін") {
+//   const password = prompt("Введіть пароль");
+//   if (password === "Я головний") {
+//     alert("Добрий день!");
+//   } else {
+//     alert("Невірний пароль!");
+//   }
+// } else if (!login) {
+//   alert("Скасовано");
+// } else {
+//   alert("Я вас не знаю");
+// }
+//Напишіть функцію logItems(array), яка приймає
+//масив та використовує цикл for, який для кожного
+//елемента масиву виводитиме повідомлення у форматі
+//<номер елемента> - <значення елемента>
+//Нумерація елементів має починатися з першого.
+//['Джаз', 'Блюз', 'Рок-н-рол', 'Реггі', 'Реп']
+
+// function logItems(array) {
+//   for (let i = 0; i < array.length; i++) {
+//     //  console.log(i);
+//     // console.log(array[i]);
+//     console.log(`${i + 1} - ${array[i]}`);
+//   }
+// }
+// logItems(["Джаз", "Блюз", "Рок-н-рол", "Реггі", "Реп", "qweqwe"]);
