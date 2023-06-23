@@ -170,8 +170,35 @@
 //Додати перевірку, що аргументи це числа.
 // 1. написати функцію
 // 2. додати числа поділтьт на кількість чисел
-function caclculateAverage(...args) {
-  return;
-}
-caclculateAverage(2, 56, 3, "Hello", "abg", 67);
+// function caclculateAverage(...args) {
+//   let total = 0;
 
+//   let quantity = 0;
+
+//   for (let arg of args) {
+//     if (typeof arg === "number") {
+//       total += arg;
+
+//       quantity += 1;
+//     }
+//   }
+//   return total / quantity;
+// }
+
+// console.log(caclculateAverage(2, 5, 3, "Hello", "abg", 10));
+//function showPrimes(n) {
+
+//   for (let i = 2; i < n; i++) {
+//     if (!isPrime(i)) continue;
+
+//     alert(i);
+//   }
+// }
+
+// function isPrime(n) {
+//   for (let i = 2; i < n; i++) {
+//     if (n % i == 0) return false;
+//   }
+
+//   return true;
+// }
