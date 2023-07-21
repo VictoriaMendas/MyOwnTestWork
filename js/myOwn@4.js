@@ -103,7 +103,151 @@
 // console.log(account);
 
 // #### 3 ####
-const myArray = [];
-for (let i = 9; i > 0; i += 2) {
-  if (i % 2 !== 0) myArray.push(i);
-}
+const cars = [
+  {
+    make: "Honda",
+    model: "CR-V",
+    type: "suv",
+    amount: 14,
+    price: 24045,
+    onSale: true,
+  },
+  {
+    make: "Honda",
+    model: "Accord",
+    type: "sedan",
+    amount: 2,
+    price: 22455,
+    onSale: true,
+  },
+  {
+    make: "Mazda",
+    model: "Mazda 6",
+    type: "sedan",
+    amount: 8,
+    price: 24195,
+    onSale: false,
+  },
+  {
+    make: "Mazda",
+    model: "CX-9",
+    type: "suv",
+    amount: 7,
+    price: 31520,
+    onSale: true,
+  },
+  {
+    make: "Toyota",
+    model: "4Runner",
+    type: "suv",
+    amount: 19,
+    price: 34210,
+    onSale: false,
+  },
+  {
+    make: "Toyota",
+    model: "Sequoia",
+    type: "suv",
+    amount: 16,
+    price: 45560,
+    onSale: false,
+  },
+  {
+    make: "Toyota",
+    model: "Tacoma",
+    type: "truck",
+    amount: 4,
+    price: 24320,
+    onSale: true,
+  },
+  {
+    make: "Ford",
+    model: "F-150",
+    type: "truck",
+    amount: 11,
+    price: 27110,
+    onSale: true,
+  },
+  {
+    make: "Ford",
+    model: "Fusion",
+    type: "sedan",
+    amount: 13,
+    price: 22120,
+    onSale: true,
+  },
+  {
+    make: "Ford",
+    model: "Explorer",
+    type: "suv",
+    amount: 6,
+    price: 31660,
+    onSale: false,
+  },
+];
+// function getModels(elements) {
+//   const carModel = elements.map((element) => element.model);
+//   return carModel;
+// }
+
+// console.log(getModels(cars));
+// const models = getModels(cars);
+// const modelsListEl = document.querySelector(".models");
+// console.dir(modelsListEl);
+
+// ### 4 ###
+
+// function renderModels(models) {
+//   const markup = models
+//     .map((model) => `<li class="models-item">${model}</li>`)
+//     .join("");
+//   modelsListEl.insertAdjacentHTML("beforeend", markup);
+// }
+
+// renderModels(models);
+
+// ### --- ###
+
+// function totalPriceCars(machines) {
+//   return machines
+//     .map((machine) => machine.price * machine.amount)
+//     .reduce((previousValue, number) => {
+//       return previousValue + number;
+//     }, 0);
+// }
+// totalPriceCars(cars);
+
+// ### --- ###
+
+// function getAvailableModelsOnSale(vehicles, number) {
+//   const getResult = vehicles.filter(
+//     (vehicle) => vehicle.onSale && vehicle.amount >= number
+//   );
+//   .map((vehicle) => vehicle.model);
+//   console.log(getResult);
+// }
+// getAvailableModelsOnSale(cars, 14);
+
+// ### 5 ###
+
+// отримати моделі авто і відсортувати їх різними сортуваннями 1.по алфавіту()
+// 2. По зростаню і по спаданню ціни()
+
+// function getCars(elements) {
+//   const sortModelsOfCars = elements.map((element) => element.model);
+//   sortModelsOfCars.sort();
+//   console.log(sortModelsOfCars);
+// }
+// getCars(cars);
+
+//  ### 6 ###
+
+// function getAscendingPrice(elements) {
+//   const descendingSort = [...elements].sort((a, b) => b.price - a.price);
+//   const ascendingSort = [...elements].sort((a, b) => a.price - b.price);
+//   const sortModelsOfCars = elements.map((element) => element.price);
+//   console.log(descendingSort);
+//   console.log(ascendingSort);
+//   console.log(sortModelsOfCars);
+// }
+// getAscendingPrice(cars);
