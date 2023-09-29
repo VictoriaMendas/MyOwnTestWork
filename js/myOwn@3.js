@@ -306,3 +306,12 @@
 // };
 // calculator.read(2, 7);
 // console.log(calculator);
+// function slugify(title) {
+//   // Change code below this lin
+//   const slug = title.split(" ").join("-").toLowerCase();
+//   console.log(slug);
+// }
+// slugify("you kakashka");
+// const str = "JavaScript is in my blood pumpkin";
+// const array = str.split(" ");
+// console.log(array.length);

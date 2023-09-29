@@ -10,12 +10,13 @@
 //   }
 //   return result.join("");
 // }
-// console.log(invertCase("School Mario"));
+// console.log(invertCase("sCHOOL mARIO"));
 
 // // #2
 
 // function invertCaseFor(string) {
 //   const array = string.split("");
+//   console.log(array);
 //   const result = [];
 //   for (let i = 0; i < array.length; i += 1) {
 //     if (array[i] === array[i].toUpperCase()) {
@@ -26,7 +27,7 @@
 //   }
 //   return result.join("");
 // }
-// console.log(invertCaseFor("School Mario Today"));
+// console.log(invertCaseFor("mnCchool Mario Today"));
 
 // ЗАДАНИЕ 1. Напиши скрипт, который для объекта user последовательно:
 // 1 добавит поле mood со значением 'happy'
@@ -72,22 +73,23 @@
 //   { name: "emerald", price: 1300, quantity: 4 },
 //   { name: "diamond", price: 2700, quantity: 6 },
 //   { name: "sapphire", price: 400, quantity: 7 },
-//   { name: "rubble", price: 150, quantity: 100 },];
+//   { name: "rubble", price: 150, quantity: 100 },
+// ];
 // function calcTotalPrice(stones, stonesName) {
 //   for (const stone of stones) {
 //     if (stone.name === stonesName) {
 //       return stone.price * stone.quantity;
 //     }
 //   }
-//   return 0;
 // }
-// console.log(stones, 'diamond');
+// console.log(stones.price, "diamond");
 
 // function findMatches(arr, ...nums) {
 //   const matches = [];
 //   for (let num of nums) {
 //     if (arr.includes(num)) {
 //       matches.push(num);
+
 //     }
 //   }
 
@@ -105,17 +107,8 @@
 // for (let item of array) {
 //   console.log(item);
 // }
-// const obj = {
-//   name: "victoria",
-//   email: "victoria@gmail.com",
-//   potions: [
-//     { name: "Speed potion", price: 460 },
-//     { name: "Dragon breath", price: 780 },
-//     { name: "Stone skin", price: 520 },
-//   ],
-// };
-// console.log(obj.potions);
-// console.log({} === {});
+// #### 4 ####
+
 // function getCommonElements(firstArray, secondArray) {
 //   const commonElements = [];
 //   // Change code below this line
@@ -126,7 +119,9 @@
 //   });
 
 //   return commonElements;
-//   // Change code above this line
+// }
+
+// ### 5 ###
 
 // Напиши функцію findSmallerNumber(numbers)
 // яка шукає найменше число в масиві.
@@ -145,10 +140,10 @@
 //   }
 //   return smallestNumber;
 // }
-// const result = findSmallerNumber(numbers);
-// console.log(findSmallerNumber(numbers));
 
-//  Task 945684658
+// console.log(findSmallerNumber([12, 76, 34]));
+
+//   ### 6 ###
 
 // Функція formatMessage(message, maxLength)
 // приймає рядок (параметр message) і форматує його,
@@ -162,7 +157,9 @@
 //   return message;
 // }
 
-// console.log(formatMessage("People help help", 3));
+// console.log(formatMessage("People help help", 8));
+
+// #### 7 ####
 
 //Напишіть функцію caclculateAverage()
 //яка приймає довільну кількість
@@ -185,9 +182,8 @@
 //   return total / quantity;
 // }
 
-// console.log(caclculateAverage(2, 5, 3, "Hello", "abg", 10));
-//function showPrimes(n) {
-
+// console.log(caclculateAverage(2, 5, 3, "Hello", "abg", 120));
+// function showPrimes(n) {
 //   for (let i = 2; i < n; i++) {
 //     if (!isPrime(i)) continue;
 
