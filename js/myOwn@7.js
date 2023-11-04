@@ -157,41 +157,6 @@
 //   { name: "Grip", price: 1200, quantity: 9 },
 // ];
 
-// function getProductPrice(productName) {
-//   // Change code below this line
-
-//   for (const product of products) {
-//     if (productName === product.name) {
-//       return product.price;
-//     }
-//   }
-//   return null;
-
-//   // Change code above this line
-// }
-// console.log(getProductPrice("Droid"));
-
-// iyiltgul
-
-//Напишіть дві функції
-// letMeSeeYourName(callback) - запитує ім'я користувача
-//через prompt та викликає callback функцію
-//greet(name) - коллбек, що приймає ім'я і логірує в консоль
-//Рядок "Привіт <name>"
-//Реалізуй перевірку, що prompt не порожній
-
-// 55876
-//Напишіть дві функції
-//makeProduct(name, price, callback) - приймає
-//ім'я та ціну товару, а також callback.
-//Функція створює об'єкт товару, додаючи йому унікальний
-//ідентифікатор як id і викликає callback
-//Передаючи йому створений об'єкт.
-//showProduct(product) - коллбек приймаючий об'єкт
-//продукту і логірующий їх у консоль
-
-// 57??
-
 //Виконай рефакторинг makeDish так, щоб не потрібно було
 // Щоразу передавати ім'я шефа.
 //Напишіть функцію makeShef(shefName), яка повертає функцію
@@ -204,7 +169,6 @@
 // makeDish("Mango", "apple pie");
 // makeDish("Poly", "muffins");
 
-// 47576?
 // const users = [
 //   {
 //     id: "701b29c3-b35d-4cf1-a5f6-8b12b29a5081",
@@ -291,40 +255,3 @@
 //     age: 39,
 //   },
 // ];
-// #1?
-// Отримати масив об'єктів користувачів за кольором очей (поле eyeColor).
-// console.log(getUsersWithEyeColor(users, 'blue')); // [об'єкт Moore Hensley, об'єкт Sharlene Bush, об'єкт Carey Barr]
-// #2?
-// Отримати масив імен користувачів за статтю (поле gender)
-// console.log(getUsersWithGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
-// #3?
-// Отримати масив тільки неактивних користувачів (поле є активним).
-// console.log(getInactiveUsers(users)); // [об'єкт Moore Hensley, об'єкт Ross Vazquez, об'єкт Blackburn Dotson]
-// використати reduce до кожної задачі після того я випішу по інщому.
-// const pizzaPalace = {
-//   pizzas: ["Ultracheese", "Smoked", "Four meats"],
-//   order(pizzaName, onSuccess, onError) {
-//     if (!pizzaName) {
-//       onError(`There is no pizza with a name ${pizzaName} in the assortment.`);
-//       return;
-//     }
-//     return onSuccess(pizzaName);
-//   },
-// };
-// // Change code above this line
-
-// // Callback for onSuccess
-// function makePizza(pizzaName) {
-//   return `Your order is accepted. Cooking pizza ${pizzaName}.`;
-// }
-
-// // Callback for onError
-// function onOrderError(error) {
-//   return `Error! ${error}`;
-// }
-
-// // Method calls with callbacks
-// pizzaPalace.order("Smoked", makePizza, onOrderError);
-// pizzaPalace.order("Four meats", makePizza, onOrderError);
-// pizzaPalace.order("Big Mike", makePizza, onOrderError);
-// pizzaPalace.order("Vienna", makePizza, onOrderError);

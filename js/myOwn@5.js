@@ -141,10 +141,10 @@
 
 // Отримати масив користувачів віком від min до max
 // function getUsersAge(persons, minAge, maxAge) {
-//   const fiteredUsesByAge = persons.filter(
+//   const fiteredUsersByAge = persons.filter(
 //     (person) => person.age >= minAge && person.age <= maxAge
 //   );
-//   return fiteredUsesByAge;
+//   return fiteredUsersByAge;
 // }
 // console.log(getUsersAge(users, 24, 33));
 // ### 7 ###
