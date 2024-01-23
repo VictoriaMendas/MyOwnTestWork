@@ -5,7 +5,7 @@ const buttonCloseModal = document.querySelector(".button-close-modal");
 btnModal.addEventListener("click", onBtnModalClick);
 buttonCloseModal.addEventListener("click", onButtonCloseModalClick);
 backdrop.addEventListener("click", onBackdropClick);
-
+console.log(btnModal);
 function onBtnModalClick(e) {
   openModal();
 }
