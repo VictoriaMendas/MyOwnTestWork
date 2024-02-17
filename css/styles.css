@@ -219,12 +219,48 @@ ul {
 .products-img:focus {
   transform: scale(1.03);
 }
-.products-list-title {
-}
-.products-list-description {
-}
-.produts-list-percentageDiscount {
-}
+
 .products-list-price {
   padding-bottom: 20px;
+}
+
+/* #123 */
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 480px;
+  padding: 12px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
+.feedback-form label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.feedback-form button {
+  padding: 8px 12px;
+  font: inherit;
+  cursor: pointer;
+  width: 35%;
+  height: 35%;
+}
+.feedback-form button:hover,
+.feedback-form button:focus {
+  background-color: blueviolet;
+  color: beige;
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+input {
+  height: 30px;
 }
