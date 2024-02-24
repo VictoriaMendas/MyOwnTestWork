@@ -1,80 +1,98 @@
 //  #123
-// Якщо імейл і пароль користувача збігаються, зберігайте дані з
-//  форми при сабмите
-// у локальне сховище і змінюй кнопку login на logout і роби
-//  поля введення Недоступними для зміни.
+// Якщо імейл і пароль користувача збігаються,
+// зберігаєм статус юзера як залогінений в локальне сховище
+// і змінюй кнопку login на logout і роби
+// поля введення Недоступними для зміни.
 
 // При перезавантаженні сторінки, якщо користувач залогінений,
 //  ми маємо бачити logout-кнопку
 // та недоступні для зміни поля з даними користувача.
+
 // Клік по кнопці logout повертає все до початкового вигляду
-// і видаляє дані користувача З локального сховища.
+// і видаляє дані користувача і форми з локального сховища.
 
 // Якщо введені дані не збігаються з потрібними даними,
 // викликати аlert і
 // повідомляти про помилку.
 
-// const USER_DATA = {
-//   email: "user@mail.com",
-//   password: "secret",
-// };
+const USER_DATA = {
+  email: "user@mail.com",
+  password: "secret",
+};
+
+const STORAGE_KEY = "form-state";
+const USER_STATUS = "user-status";
+
 const form = document.querySelector(".feedback-form");
 
-const { email, password } = form.elements;
+const { email, password, submitBtn } = form.elements;
 
 form.addEventListener("input", onInputBtnClick);
 form.addEventListener("submit", onSubmitBtnClick);
 
-const USER_DATA = "form-state";
-textArea();
-// // const localValue = e.target.value;
-// const dataForm = localStorage.getItem(USER_DATA) || {};
-// console.log(dataForm);
-// clickForm();
+let formData = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+let userStatus = JSON.parse(localStorage.getItem(USER_STATUS)) || false;
 
-// function onInputBtnClick(e) {
-//   dataForm[e.target.name] = e.target.value.trim();
+restoreForm();
+checkUserStatus();
 
-//   localStorage.setItem(USER_DATA, JSON.stringify(dataForm));
-// }
+// відновлюємо дані форми коли юзер відкрив сторінку
+function restoreForm() {
+  if (formData) {
+    email.value = formData.email || "";
+    password.value = formData.password || "";
+  }
+}
 
-// function clickForm() {
-//   const markup1 = ` <button type="button" class="login ">Login</button>`;
-//   const markup2 = `<button type="button" class="logout ">Logout</button>`;
+// перевіряємо статус юзера коли юзер відкрив сторінку
+function checkUserStatus() {
+  if (userStatus) {
+    submitBtn.textContent = "Logout";
+    email.disabled = true;
+    password.disabled = true;
+  }
+}
 
-//   if (dataForm) {
-//     try {
-//       const parseItems = JSON.parse(dataForm);
-
-//       email.value = parseItems.email || "";
-//       password.value = parseItems.password || "";
-//       return form.insertAdjacentHTML("afterbegin", markup2);
-//     } catch (error) {
-//       console.error();
-//     }
-//   }
-//   form.insertAdjacentHTML("afterbegin", markup1);
-// }
-// function onSubmitBtnClick(e) {
-//   e.preventDefault();
-//   e.currentTarget.reset();
-//   localStorage.removeItem(USER_DATA);
-// }
+// юзер вводить дані
 function onInputBtnClick(e) {
-  const value = e.target.value;
-  localStorage.setItem(USER_DATA, value);
+  formData[e.target.name] = e.target.value.trim();
+
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
 }
 
 function onSubmitBtnClick(e) {
   e.preventDefault();
-  e.currentTarget.reset();
-  localStorage.removeItem(USER_DATA);
-}
 
-function textArea() {
-  const getItem = localStorage.getItem(USER_DATA);
-  if (!getItem) {
-    // form.textarea.value = getItem;
-    alert("Error pls try again");
+  // юзер нажимає Logout
+  if (userStatus) {
+    userStatus = false;
+
+    localStorage.setItem(USER_STATUS, JSON.stringify(userStatus));
+
+    email.disabled = false;
+    password.disabled = false;
+
+    submitBtn.textContent = "Login";
+
+    return;
+  }
+
+  // юзер нажимає Login
+  if (
+    formData.email === USER_DATA.email &&
+    formData.password === USER_DATA.password
+  ) {
+    userStatus = true;
+
+    localStorage.setItem(USER_STATUS, JSON.stringify(userStatus));
+
+    email.disabled = true;
+    password.disabled = true;
+
+    submitBtn.textContent = "Logout";
+  } else {
+    alert(
+      `Email "${email.value}" or/and password "${password.value}" is wrong!`
+    );
   }
 }
