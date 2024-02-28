@@ -14,85 +14,75 @@
 // Якщо введені дані не збігаються з потрібними даними,
 // викликати аlert і
 // повідомляти про помилку.
+// const USER_DATA = {
+//   email: "user@mail.com",
+//   password: "secret",
+// };
 
-const USER_DATA = {
-  email: "user@mail.com",
-  password: "secret",
-};
+// const STORAGE_KEY = "form-state";
+// const USER_STATUS = "user-status";
 
-const STORAGE_KEY = "form-state";
-const USER_STATUS = "user-status";
+// const form = document.querySelector(".feedback-form");
 
-const form = document.querySelector(".feedback-form");
+// const { email, password, submitBtn } = form.elements;
+// form.addEventListener("input", onInputBtnClick);
+// form.addEventListener("submit", oSubmitBtnClick);
 
-const { email, password, submitBtn } = form.elements;
+// let formData = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+// let userStatus = JSON.parse(localStorage.getItem(USER_DATA)) || false;
 
-form.addEventListener("input", onInputBtnClick);
-form.addEventListener("submit", onSubmitBtnClick);
+// restoreForm();
+// checkUserStatus();
 
-let formData = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
-let userStatus = JSON.parse(localStorage.getItem(USER_STATUS)) || false;
+// function restoreForm() {
+//   if (formData) {
+//     email.value = formData.email || "";
+//     password.value = formData.password || "";
+//   }
+// }
 
-restoreForm();
-checkUserStatus();
+// function checkUserStatus() {
+//   if (userStatus) {
+//     submitBtn.textContent = "Logout";
 
-// відновлюємо дані форми коли юзер відкрив сторінку
-function restoreForm() {
-  if (formData) {
-    email.value = formData.email || "";
-    password.value = formData.password || "";
-  }
-}
+//     email.disabled = true;
+//     password.disabled = true;
+//   }
+// }
 
-// перевіряємо статус юзера коли юзер відкрив сторінку
-function checkUserStatus() {
-  if (userStatus) {
-    submitBtn.textContent = "Logout";
-    email.disabled = true;
-    password.disabled = true;
-  }
-}
+// function onInputBtnClick(e) {
+//   formData[e.target.name] = e.target.value.trim();
 
-// юзер вводить дані
-function onInputBtnClick(e) {
-  formData[e.target.name] = e.target.value.trim();
+//   localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
+// }
+// function oSubmitBtnClick(e) {
+//   e.preventDefault();
+//   if (userStatus) {
+//     userStatus = false;
 
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
-}
+//     localStorage.setItem(USER_STATUS, JSON.stringify(userStatus));
 
-function onSubmitBtnClick(e) {
-  e.preventDefault();
+//     email.disabled = false;
+//     password.disabled = false;
 
-  // юзер нажимає Logout
-  if (userStatus) {
-    userStatus = false;
+//     submitBtn.textContent = "Login";
+//     return;
+//   }
 
-    localStorage.setItem(USER_STATUS, JSON.stringify(userStatus));
+//   if (
+//     formData.email === USER_DATA.email &&
+//     formData.password === USER_DATA.password
+//   ) {
+//     userStatus = true;
 
-    email.disabled = false;
-    password.disabled = false;
+//     localStorage.setItem(USER_STATUS, JSON.stringify(userStatus));
+//     email.disabled = true;
+//     password.disabled = true;
 
-    submitBtn.textContent = "Login";
-
-    return;
-  }
-
-  // юзер нажимає Login
-  if (
-    formData.email === USER_DATA.email &&
-    formData.password === USER_DATA.password
-  ) {
-    userStatus = true;
-
-    localStorage.setItem(USER_STATUS, JSON.stringify(userStatus));
-
-    email.disabled = true;
-    password.disabled = true;
-
-    submitBtn.textContent = "Logout";
-  } else {
-    alert(
-      `Email "${email.value}" or/and password "${password.value}" is wrong!`
-    );
-  }
-}
+//     submitBtn.textContent = "Logout";
+//   } else {
+//     alert(
+//       `Email "${email.value}" and/or password "${password.value}" incorrect`
+//     );
+//   }
+// }
