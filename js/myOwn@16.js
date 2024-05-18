@@ -71,7 +71,7 @@ var removeDuplicates = function (nums) {
   nums.filter((num, index, array) => array.indexOf(num) === index);
   uniqueNum.push(nums);
   const k = removeDuplicates(nums);
-  console.log(k);
+  console.log(uniqueNum);
   k === uniqueNum.length;
   for (let i = 0; i < k; i++) {
     return nums[i] === uniqueNum.length;
